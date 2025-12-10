@@ -1,0 +1,22 @@
+{
+    "extracted_data": {
+        "policy_number": "PL-458921",
+        "name": "Rohan Sharma",
+        "contact": "9876543210",
+        "email": "rohan.sharma@example.com",
+        "incident_date": "2025-01-12",
+        "incident_time": "6:45 PM",
+        "location": "Madhapur, Hyderabad",
+        "claim_type": "Motor Accident",
+        "vehicle_model": "Maruti Suzuki Swift",
+        "vehicle_number": "TS09AB1234",
+        "year": "2020",
+        "description": "The insured vehicle was rear-ended by another car at a traffic signal.\n    Minor damage to rear bumper. No injuries reported.",
+        "claim_amount": "12,500"
+    },
+    "validation_issues": [],
+    "workflow_decision": "standard_processing",
+    "explanation": [
+        "Normal claim with no issues \u2192 Standard processing."
+    ]
+}

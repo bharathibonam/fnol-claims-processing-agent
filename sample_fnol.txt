@@ -1,0 +1,31 @@
+FIRST NOTICE OF LOSS (FNOL)
+
+Policy Number: PL-458921
+Policyholder Name: Rohan Sharma
+Contact Number: 9876543210
+Email: rohan.sharma@example.com
+
+Date of Incident: 2025-01-12
+Time of Incident: 6:45 PM
+Location of Incident: Madhapur, Hyderabad
+
+Type of Claim: Motor Accident
+
+Vehicle Details:
+    Make & Model: Maruti Suzuki Swift
+    Registration Number: TS09AB1234
+    Year of Manufacture: 2020
+
+Description of Incident:
+    The insured vehicle was rear-ended by another car at a traffic signal.
+    Minor damage to rear bumper. No injuries reported.
+
+Estimated Claim Amount: 12,500 INR
+
+Supporting Documents:
+    - Photos submitted
+    - Driving license uploaded
+    - RC uploaded
+
+Additional Notes:
+    No police complaint filed.
