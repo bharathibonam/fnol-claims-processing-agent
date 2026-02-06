@@ -1,115 +1,155 @@
 📘 Autonomous Insurance Claims Processing Agent (Lite Version)
 
-A simple, modular Python-based agent that extracts key fields from FNOL documents, validates missing or inconsistent information, and determines workflow routing (fast-track, manual review, or standard processing).
+A lightweight, modular Python-based FNOL (First Notice of Loss) processing agent built as part of the Synapx Junior Software Developer Assessment (Assessment 1 & 2).
+
+This project demonstrates how insurance claims can be automatically extracted, validated, and routed using clear business rules with human-readable explanations.
 
 🚀 Project Overview
 
-Insurance companies receive a First Notice of Loss (FNOL) when a customer reports an incident.
-This project simulates an autonomous claim-processing agent that can:
+When an insurance incident occurs, companies receive a First Notice of Loss (FNOL).
+Manually reviewing these claims is slow and error-prone.
 
-Extract structured fields from an FNOL document
+This project simulates an autonomous claims processing agent that:
 
-Validate the extracted details
+Extracts key structured fields from FNOL input
 
-Identify missing or inconsistent information
+Identifies missing or inconsistent information
 
-Decide the routing workflow
+Classifies and routes claims into the correct workflow
 
-Generate an explanation for the decision
+Explains why a specific routing decision was made
 
-This project was developed as part of the Synapx Junior Software Engineer assessment.
+The focus is on clarity, logic, and clean code rather than over-engineering.
 
-🧩 Key Features
+✨ Key Features
 
-✔ Extracts FNOL data using regex
-✔ Validates field completeness & consistency
-✔ Applies simple rule-based workflow logic
-✔ Generates clean JSON output
-✔ Modular, beginner-friendly Python code
-✔ Easy to extend with ML or APIs
+✔ Extracts important FNOL fields
+✔ Validates mandatory data
+✔ Detects suspicious claim descriptions
+✔ Applies rule-based workflow routing
+✔ Generates clean, structured JSON output
+✔ Simple, readable, beginner-friendly Python code
 
-📂 Project Structure
-fnol_claims_processing_agent/
-│
-├── main.py               # Main script that runs the entire agent
-├── extractor.py          # Extract key fields from FNOL text file
-├── validator.py          # Validate missing and inconsistent fields
-├── workflow.py           # Workflow decision logic
-├── sample_fnol.txt       # Sample FNOL document used for testing
-└── output.json           # Auto-generated output from main.py
+🧩 Processing Flow
+
+The system follows a clear pipeline:
+
+Extraction
+Parses FNOL data and extracts policy, incident, asset, and claim details.
+
+Validation
+Checks for missing or inconsistent mandatory fields.
+
+Routing Logic
+Determines the correct workflow based on business rules.
+
+Decision Explanation
+Produces a short, human-readable explanation for each decision.
+
+🚦 Routing Logic (Business Rules)
+
+Routing is applied in the following priority order:
+
+Investigation Flag
+If the description contains suspicious keywords such as
+fraud, inconsistent, or staged.
+
+Specialist Queue
+If the claim type involves injury.
+
+Manual Review
+If any mandatory fields are missing or inconsistent.
+
+Fast-track
+If the estimated damage is below 25,000 and no issues are found.
+
+Default
+Claims that do not qualify for fast-track are routed to manual review.
+
+📤 Output Format
+
+The final decision is generated in the following JSON structure:
+
+{
+  "extractedFields": {},
+  "missingFields": [],
+  "recommendedRoute": "",
+  "reasoning": ""
+}
+
+
+This makes the output:
+
+Easy to understand
+
+Easy to integrate with downstream systems
+
+Transparent in decision-making
+
+🤖 AI Tools Usage
+
+AI tools were used to:
+
+Assist with structuring extraction and validation logic
+
+Improve routing clarity
+
+Generate concise, human-readable explanations
+
+The emphasis was on clarity over complexity, as required by the assessment.
 
 ▶️ How to Run the Project
-1️⃣ Install Python
 
-Download from: https://www.python.org/downloads/
+Navigate to the project directory:
 
-2️⃣ Clone the Repository
-git clone https://github.com/bharathibonam/fnol-claims-processing-agent.git
-cd fnol-claims-processing-agent
+cd fnol_claims_agent
 
-3️⃣ Run the Script
+
+Run the application:
+
 python main.py
 
-4️⃣ View the Output
 
-A file named output.json will be created.
+View the generated output:
 
-📝 Sample FNOL Document
+output.json
 
-The FNOL includes:
+📂 Project Structure
+fnol_claims_agent/
+│
+├── main.py        # Entry point
+├── extractor.py   # FNOL field extraction
+├── validator.py   # Validation logic
+├── workflow.py    # Routing decision logic
+├── output.json    # Generated output
+└── README.md      # Project documentation
 
-Policy number
+🧠 What This Project Demonstrates
 
-Policyholder details
+Strong problem breakdown
 
-Incident date & location
+Clear business logic implementation
 
-Claim type
+Clean and modular Python code
 
-Vehicle info
+Practical use of AI-assisted development
 
-Description
-
-Estimated claim amount
-
-⚙️ How It Works
-1. extractor.py
-
-Extracts text using regular expressions.
-
-2. validator.py
-
-Checks for:
-
-Missing fields
-
-Invalid values
-
-Inconsistencies
-
-3. workflow.py
-
-Decides:
-
-manual_review → if issues
-
-fast_track → if amount < 10,000
-
-standard_processing → otherwise
-
-🔮 Possible Enhancements
-
-Add OCR to read PDFs
-
-Use ML for risk prediction
-
-Build API using FastAPI
-
-Add UI with Streamlit
+Real-world insurance domain understanding
 
 👤 Author
 
 Bharathi Bonam
-Python Developer • SQL • Problem Solving • Aspiring Software Engineer
+Aspiring Software Engineer
+Python • SQL • Problem Solving • Data & Logic-Driven Development
 
-🎉 Thank you for reviewing this project!
+🎯 Final Note
+
+This is a lightweight implementation designed to showcase:
+
+Logical thinking
+
+Clean engineering practices
+
+Explainable decision-making
+
+Clarity was intentionally prioritized over complexity.
