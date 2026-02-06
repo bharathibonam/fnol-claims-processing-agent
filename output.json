@@ -15,8 +15,8 @@
         "claim_amount": "12,500"
     },
     "validation_issues": [],
-    "workflow_decision": "standard_processing",
+    "workflow_decision": "fast_track",
     "explanation": [
-        "Normal claim with no issues \u2192 Standard processing."
+        "Estimated damage below 25,000 \u2192 Fast-track."
     ]
 }
